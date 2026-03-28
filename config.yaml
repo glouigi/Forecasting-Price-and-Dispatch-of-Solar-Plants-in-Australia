@@ -1,0 +1,61 @@
+aemo:
+  # Data source: NEMWEB (aemo.com.au) — authoritative, free, no API key
+  nemweb_base: "https://www.nemweb.com.au"
+  regions:
+    NSW: "NSW1"
+    QLD: "QLD1"
+    VIC: "VIC1"
+    SA:  "SA1"
+    TAS: "TAS1"
+  # Approximate nameplate solar capacity per region (MW, utility + rooftop, ~2024)
+  solar_capacity_mw:
+    NSW: 7500
+    QLD: 6500
+    VIC: 4000
+    SA:  2500
+    TAS:  200
+  default_interval: "30m"
+  train_period_days: 365
+  live_period_days: 7
+
+weather:
+  forecast_url: "https://api.open-meteo.com/v1/forecast"
+  archive_url:  "https://archive-api.open-meteo.com/v1/archive"
+  variables:
+    - temperature_2m
+    - shortwave_radiation
+    - direct_normal_irradiance
+    - cloud_cover
+    - wind_speed_10m
+    - precipitation
+  region_coords:
+    NSW: {lat: -33.8688, lon: 151.2093}
+    QLD: {lat: -27.4698, lon: 153.0251}
+    VIC: {lat: -37.8136, lon: 144.9631}
+    SA:  {lat: -34.9285, lon: 138.6007}
+    TAS: {lat: -42.8821, lon: 147.3272}
+
+features:
+  lags_hours: [1, 2, 3, 6, 12, 24, 48, 72, 168]
+  rolling_windows: [6, 24, 168]
+  targets:
+    - electricity_price_aud_mwh
+    - solar_dispatch_mw
+
+models:
+  random_seed: 42
+  forecast_horizon_hours: 24
+  lgbm:
+    n_trials: 50
+    cv_folds: 5
+    early_stopping_rounds: 50
+    n_estimators_max: 1000
+
+mlflow:
+  tracking_uri: "mlruns"
+  experiment_name: "solar_forecast_australia"
+
+data:
+  cache_dir: "data"
+  models_dir: "models"
+  cache_ttl_hours: 6

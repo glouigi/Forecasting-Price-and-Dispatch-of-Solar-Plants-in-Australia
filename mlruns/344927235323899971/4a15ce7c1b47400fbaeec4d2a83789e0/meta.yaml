@@ -1,0 +1,15 @@
+artifact_uri: file:m:/0. GIORGIO DOC/CLAUDE/Forecasting Price and Dispatch of Solar
+  Plants in Australia/mlruns/344927235323899971/4a15ce7c1b47400fbaeec4d2a83789e0/artifacts
+end_time: 1774707159079
+entry_point_name: ''
+experiment_id: '344927235323899971'
+lifecycle_stage: active
+run_id: 4a15ce7c1b47400fbaeec4d2a83789e0
+run_name: hpo_solar_dispatch_mw
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1774705946436
+status: 4
+tags: []
+user_id: grami

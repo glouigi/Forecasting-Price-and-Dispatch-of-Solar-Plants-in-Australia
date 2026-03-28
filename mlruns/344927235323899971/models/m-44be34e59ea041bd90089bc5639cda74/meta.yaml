@@ -1,0 +1,11 @@
+artifact_location: file:m:/0. GIORGIO DOC/CLAUDE/Forecasting Price and Dispatch of
+  Solar Plants in Australia/mlruns/344927235323899971/models/m-44be34e59ea041bd90089bc5639cda74/artifacts
+creation_timestamp: 1774705932815
+experiment_id: '344927235323899971'
+last_updated_timestamp: 1774705946379
+model_id: m-44be34e59ea041bd90089bc5639cda74
+model_type: null
+name: model_electricity_price_aud_mwh
+source_run_id: b62a66eff7574494bc2f683533c65b09
+status: 2
+status_message: null

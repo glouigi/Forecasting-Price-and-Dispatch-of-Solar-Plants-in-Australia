@@ -1,0 +1,6 @@
+{
+  "target": "electricity_price_aud_mwh",
+  "n_estimators": 3,
+  "n_features": 61,
+  "best_score": 433.36031263906574
+}

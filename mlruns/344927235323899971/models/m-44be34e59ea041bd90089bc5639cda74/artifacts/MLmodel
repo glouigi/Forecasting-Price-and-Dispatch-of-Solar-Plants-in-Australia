@@ -1,0 +1,24 @@
+artifact_path: file:m:/0. GIORGIO DOC/CLAUDE/Forecasting Price and Dispatch of Solar
+  Plants in Australia/mlruns/344927235323899971/models/m-44be34e59ea041bd90089bc5639cda74/artifacts
+flavors:
+  lightgbm:
+    code: null
+    data: model.pkl
+    lgb_version: 4.6.0
+    model_class: lightgbm.sklearn.LGBMRegressor
+    serialization_format: cloudpickle
+    skops_trusted_types: null
+  python_function:
+    data: model.pkl
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.lightgbm
+    python_version: 3.13.12
+mlflow_version: 3.10.1
+model_id: m-44be34e59ea041bd90089bc5639cda74
+model_size_bytes: 59330
+model_uuid: m-44be34e59ea041bd90089bc5639cda74
+prompts: null
+run_id: b62a66eff7574494bc2f683533c65b09
+utc_time_created: '2026-03-28 13:52:12.941041'
